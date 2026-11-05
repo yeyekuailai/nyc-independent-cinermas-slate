@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "ratings:sync": "node scripts/sync-ratings.mjs",
+    "ratings:audit": "node scripts/sync-ratings.mjs --check"
+  }
+}
