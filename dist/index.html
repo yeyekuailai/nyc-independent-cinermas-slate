@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="纽约四家艺术影院的近期排期、官网购票与豆瓣、IMDb 评分入口。">
+  <meta name="theme-color" content="#f3f6f8">
+  <title>NYC Film Slate · 纽约艺术影院排期</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23101820'/%3E%3Ccircle cx='22' cy='23' r='7' fill='%23f3f6f8'/%3E%3Ccircle cx='42' cy='23' r='7' fill='%23f3f6f8'/%3E%3Ccircle cx='32' cy='42' r='7' fill='%23e23d35'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#schedule">跳到排期</a>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="电影排期首页">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>电影排期</span>
+    </a>
+    <div class="mast-meta">
+      <span>纽约时间</span>
+      <time id="clock">--:--</time>
+      <span class="live-dot">官网核对</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="controls" aria-label="排期筛选">
+      <div class="date-strip" id="dateStrip" role="group" aria-label="选择日期"></div>
+      <div class="filter-row">
+        <div class="venue-filters" id="venueFilters" role="group" aria-label="选择影院">
+          <button class="filter active" data-venue="all" aria-pressed="true">全部影院</button>
+          <button class="filter" data-venue="flc" aria-pressed="false"><span class="dot flc"></span>Lincoln Center</button>
+          <button class="filter" data-venue="js" aria-pressed="false"><span class="dot js"></span>Japan Society</button>
+          <button class="filter" data-venue="metro" aria-pressed="false"><span class="dot metro"></span>Metrograph</button>
+          <button class="filter" data-venue="ff" aria-pressed="false"><span class="dot ff"></span>Film Forum</button>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">搜索电影或导演</span>
+          <input id="searchInput" type="search" placeholder="搜索电影 / 导演" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule" aria-live="polite">
+      <div class="schedule-heading">
+        <div>
+          <p class="eyebrow" id="resultDate">近期排期</p>
+          <h2><span id="resultCount">0</span> 部电影</h2>
+        </div>
+        <p class="source-note">排期最后核对：2026.11.04<br>购票前请以影院官网为准</p>
+      </div>
+      <div class="film-list" id="filmList"></div>
+      <div class="empty" id="emptyState" hidden>
+        <span aria-hidden="true">◯</span>
+        <h3>这一天没有找到场次</h3>
+        <p>换一个日期或清除影院筛选。</p>
+        <button id="resetButton">查看全部近期排期</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>评分核对于 <span id="ratingsCheckedAt">2026.11.04</span>，可能随新增评价变化。</p>
+    <p>排期以影院官网为准</p>
+  </footer>
+
+  <div class="changeover" id="changeover" aria-hidden="true"><span>CHANGEOVER</span></div>
+  <script src="app.js"></script>
+</body>
+</html>
