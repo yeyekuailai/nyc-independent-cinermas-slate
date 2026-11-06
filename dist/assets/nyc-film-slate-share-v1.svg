@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f6f8"/>
+  <rect x="0" y="0" width="22" height="630" fill="#9fd5bd"/>
+  <rect x="22" y="0" width="1178" height="18" fill="#101820"/>
+
+  <text x="72" y="76" fill="#62707c" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="4">NEW YORK INDEPENDENT CINEMA GUIDE</text>
+
+  <rect x="70" y="112" width="500" height="310" rx="22" fill="#ffffff" stroke="#cbd4da" stroke-width="2"/>
+  <image href="nyc-film-slate-logo.png" x="98" y="150" width="444" height="227" preserveAspectRatio="xMidYMid meet"/>
+
+  <text x="638" y="166" fill="#101820" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="74" font-weight="900" letter-spacing="-2">WHAT’S</text>
+  <text x="638" y="244" fill="#101820" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="74" font-weight="900" letter-spacing="-2">PLAYING</text>
+  <text x="638" y="322" fill="#16824f" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="74" font-weight="900" letter-spacing="-2">IN NYC?</text>
+
+  <line x1="638" y1="361" x2="1128" y2="361" stroke="#101820" stroke-width="3"/>
+  <text x="638" y="405" fill="#34434e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="1">SCHEDULES  ·  OFFICIAL TICKETS</text>
+  <text x="638" y="442" fill="#34434e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="1">DOUBAN + IMDb RATINGS</text>
+
+  <rect x="70" y="493" width="1058" height="1" fill="#cbd4da"/>
+  <text x="70" y="540" fill="#101820" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">FILM AT LINCOLN CENTER  ·  METROGRAPH</text>
+  <text x="70" y="574" fill="#101820" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">JAPAN SOCIETY  ·  FILM FORUM</text>
+  <text x="1128" y="574" text-anchor="end" fill="#62707c" font-family="Courier New, monospace" font-size="16">NYC FILM SLATE</text>
+</svg>
