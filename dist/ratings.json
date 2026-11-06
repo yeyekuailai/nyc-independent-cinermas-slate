@@ -1,21 +1,22 @@
 {
   "meta": {
-    "checkedAt": "2026-11-04",
+    "checkedAt": "2026-11-05",
+    "scheduleFingerprint": "90567c319861f50a1d6a1a1387c4e72a3ab1f07363efe9ff75e18e77d8db0d1a",
+    "syncStatus": "complete",
     "sources": {
       "douban": "m.douban.com/rexxar/api/v2/movie/{id}",
       "imdb": "datasets.imdbws.com/title.ratings.tsv.gz"
-    },
-    "scheduleFingerprint": "90567c319861f50a1d6a1a1387c4e72a3ab1f07363efe9ff75e18e77d8db0d1a",
-    "syncStatus": "complete"
+    }
   },
   "films": {
     "Fatherland": {
-      "douban": "7.7",
+      "douban": "7.6",
       "imdb": "7.3",
       "doubanId": "37487816",
       "imdbId": "tt37304295",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "故土"
     },
     "Once Upon a Time in Harlem": {
       "imdb": "7.7",
@@ -23,7 +24,8 @@
       "imdbId": "tt39163347",
       "douban": null,
       "doubanStatus": "unrated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "哈莱姆往事"
     },
     "Possible Love": {
       "douban": "8.6",
@@ -31,7 +33,8 @@
       "doubanId": "36847425",
       "imdbId": "tt37803364",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "可能的爱"
     },
     "Everytime": {
       "douban": "7.8",
@@ -46,7 +49,8 @@
       "doubanId": "36690639",
       "imdbId": "tt28088049",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "苦涩的圣诞节"
     },
     "All of a Sudden": {
       "douban": "7.7",
@@ -54,7 +58,8 @@
       "doubanId": "37342630",
       "imdbId": "tt36834996",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "突如其来"
     },
     "My Undesirable Friends: Part II – Exile": {
       "doubanStatus": "not_found",
@@ -68,7 +73,8 @@
       "imdbId": "tt39150111",
       "douban": null,
       "doubanStatus": "unrated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "子"
     },
     "A Woman Called Sada Abe": {
       "imdb": "6.1",
@@ -139,20 +145,22 @@
       "imdbStatus": "rated"
     },
     "The Devils": {
-      "douban": "7.9",
+      "douban": "7.8",
       "imdb": "7.8",
       "doubanId": "1823255",
       "imdbId": "tt0066993",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "卢丹的恶魔"
     },
     "All We Imagine as Light": {
-      "douban": "7.1",
+      "douban": "7.5",
       "imdb": "7.0",
       "doubanId": "35965772",
       "imdbId": "tt32086077",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "想象之光"
     },
     "Midnight in Paris": {
       "douban": "8.3",
@@ -160,15 +168,17 @@
       "doubanId": "4319218",
       "imdbId": "tt1605783",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "午夜巴黎"
     },
     "All That Heaven Allows": {
-      "douban": "7.7",
+      "douban": "7.5",
       "imdb": "7.6",
       "doubanId": "1303345",
       "imdbId": "tt0047811",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "深锁春光一院愁"
     },
     "Strangers on a Train": {
       "douban": "8.1",
@@ -176,7 +186,8 @@
       "doubanId": "1298505",
       "imdbId": "tt0044079",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "火车怪客"
     },
     "Electra, My Love": {
       "imdb": "6.8",
@@ -185,28 +196,31 @@
       "imdbStatus": "rated"
     },
     "Oldboy": {
-      "douban": "8.3",
+      "douban": "8.2",
       "imdb": "8.3",
       "doubanId": "1308865",
       "imdbId": "tt0364569",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "老男孩"
     },
     "Ghost in the Shell: 30th Anniversary Remaster": {
-      "douban": "9.1",
+      "douban": "9.0",
       "imdb": "7.9",
       "doubanId": "1291936",
       "imdbId": "tt0113568",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "攻壳机动队"
     },
     "Bram Stoker’s Dracula": {
-      "douban": "7.8",
+      "douban": "7.7",
       "imdb": "7.4",
       "doubanId": "1293124",
       "imdbId": "tt0103874",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "惊情四百年"
     },
     "News from Home": {
       "imdb": "6.5",
@@ -221,12 +235,13 @@
       "imdbStatus": "rated"
     },
     "Chinese Roulette": {
-      "douban": "7.4",
+      "douban": "7.9",
       "imdb": "7.2",
       "doubanId": "1300050",
       "imdbId": "tt0074312",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "中国轮盘"
     },
     "Suzhou River": {
       "douban": "8.2",
@@ -234,47 +249,53 @@
       "doubanId": "1299661",
       "imdbId": "tt0234837",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "苏州河"
     },
     "The Brood": {
-      "douban": "6.9",
+      "douban": "7.2",
       "imdb": "6.8",
       "doubanId": "1305914",
       "imdbId": "tt0078908",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "灵婴"
     },
     "Lost Highway": {
-      "douban": "8.0",
+      "douban": "8.1",
       "imdb": "7.6",
       "doubanId": "1303459",
       "imdbId": "tt0116922",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "妖夜慌踪"
     },
     "Brief Encounter": {
-      "douban": "8.5",
+      "douban": "8.0",
       "imdb": "8.0",
       "doubanId": "1294364",
       "imdbId": "tt0037558",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "相见恨晚"
     },
     "Autumn Sonata": {
-      "douban": "8.4",
+      "douban": "9.0",
       "imdb": "8.1",
       "doubanId": "1297268",
       "imdbId": "tt0077711",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "秋日奏鸣曲"
     },
     "Beetlejuice": {
-      "douban": "7.4",
+      "douban": "7.6",
       "imdb": "7.4",
       "doubanId": "1293639",
       "imdbId": "tt0094721",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "阴间大法师"
     },
     "Blade Runner: The Final Cut": {
       "douban": "8.6",
@@ -282,15 +303,17 @@
       "doubanId": "1291839",
       "imdbId": "tt0083658",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "银翼杀手"
     },
     "Watcher in the Attic": {
-      "douban": "6.8",
+      "douban": "6.4",
       "imdb": "7.2",
       "doubanId": "1610260",
       "imdbId": "tt0075430",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "江户川乱步猎奇馆 屋脊里的散步者"
     },
     "Citizen Ruth": {
       "douban": "7.6",
@@ -298,7 +321,8 @@
       "doubanId": "1302469",
       "imdbId": "tt0115906",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "公民露丝"
     },
     "Unzipped": {
       "imdb": "6.5",
@@ -312,7 +336,8 @@
       "doubanId": "1293323",
       "imdbId": "tt0101640",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "大红灯笼高高挂"
     },
     "The Red Balloon": {
       "douban": "8.8",
@@ -320,7 +345,8 @@
       "doubanId": "1326038",
       "imdbId": "tt0048980",
       "doubanStatus": "rated",
-      "imdbStatus": "rated"
+      "imdbStatus": "rated",
+      "doubanTitle": "红气球"
     }
   }
 }
