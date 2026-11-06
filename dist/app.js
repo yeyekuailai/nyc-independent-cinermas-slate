@@ -58,9 +58,9 @@ const films = [
   { title: "Last Cabaret", director: "Shusuke Kaneko", year: 1988, runtime: 78, format: "18+", venue: "js", shows: { "2026-12-06": ["19:00"] } }
 ];
 
-const weekday = new Intl.DateTimeFormat("zh-CN", { weekday: "short", timeZone: "America/New_York" });
+const weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "America/New_York" });
 const monthName = new Intl.DateTimeFormat("en-US", { month: "short", timeZone: "America/New_York" });
-const fullDate = new Intl.DateTimeFormat("zh-CN", { month: "long", day: "numeric", weekday: "long", timeZone: "America/New_York" });
+const fullDate = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", weekday: "long", timeZone: "America/New_York" });
 const shortDate = new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit", timeZone: "America/New_York" });
 const allDates = [...new Set(films.flatMap(f => Object.keys(f.shows)))].sort();
 const calendarDates = buildDateRange("2026-11-04", allDates.at(-1));
@@ -97,10 +97,37 @@ function ticketUrl(film) {
   if (film.venue === "ff") return film.ticket || "https://my.filmforum.org/";
   return "https://metrograph.com/nyc/";
 }
+function displayText(value) {
+  const replacements = [
+    ["全长导演剪辑", "Complete director’s cut"],
+    ["分段放映", "Chapter presentation"],
+    ["映后交流", "Post-screening discussion"],
+    ["新英文字幕", "New English subtitles"],
+    ["英文字幕", "English subtitles"],
+    ["多语种", "Multilingual"],
+    ["西班牙语", "Spanish"],
+    ["法语、日语", "French & Japanese"],
+    ["普通话", "Mandarin"],
+    ["韩语", "Korean"],
+    ["德语", "German"],
+    ["英语", "English"],
+    ["新修复", "New restoration"],
+    ["4K 修复", "4K restoration"],
+    ["2K 修复", "2K restoration"],
+    ["30周年", "30th anniversary"],
+    ["纪录片", "Documentary"],
+    ["特别场", "Special screening"],
+    ["前映", "Preceded by"],
+    ["日版", "Japanese print"],
+    ["分钟", " min"],
+    [" 与 ", " and "]
+  ];
+  return replacements.reduce((text, [from, to]) => text.replaceAll(from, to), value);
+}
 function ratingMarkup(film) {
   const score = ratings[film.title] || {};
   return `<div class="ratings">
-    <a class="rating douban-rating" href="${doubanUrl(film)}" target="_blank" rel="noreferrer"><span>豆瓣</span><strong>${score.douban || "—"}</strong></a>
+    <a class="rating douban-rating" href="${doubanUrl(film)}" target="_blank" rel="noreferrer"><span>Douban</span><strong>${score.douban || "—"}</strong></a>
     <a class="rating imdb-rating" href="${imdbUrl(film)}" target="_blank" rel="noreferrer"><span>IMDb</span><strong>${score.imdb || "—"}</strong></a>
   </div>`;
 }
@@ -111,7 +138,7 @@ function dateMarkup(value) {
 
 function buildDateStrip() {
   const strip = document.querySelector("#dateStrip");
-  strip.innerHTML = `<button class="date-button active" data-date="all" aria-pressed="true"><span>NOV / DEC</span><strong>全部</strong></button>` +
+  strip.innerHTML = `<button class="date-button active" data-date="all" aria-pressed="true"><span>NOV / DEC</span><strong>All</strong></button>` +
     calendarDates.map(d => `<button class="date-button" data-date="${d}" aria-pressed="false">${dateMarkup(d)}</button>`).join("");
   strip.addEventListener("click", e => {
     if (strip.dataset.justDragged === "true") {
@@ -183,25 +210,25 @@ function render() {
     .sort((a, b) => a.date.localeCompare(b.date) || a.times[0].localeCompare(b.times[0]));
 
   document.querySelector("#resultCount").textContent = new Set(rows.map(r => r.film.title)).size;
-  document.querySelector("#resultDate").textContent = selectedDate === "all" ? "已公布的近期场次" : fullDate.format(parseDate(selectedDate));
+  document.querySelector("#resultDate").textContent = selectedDate === "all" ? "Upcoming screenings" : fullDate.format(parseDate(selectedDate));
   document.querySelector("#emptyState").hidden = rows.length > 0;
   list.innerHTML = rows.map(({ film, date, times }) => `
     <article class="film-row">
       <div class="film-date"><strong>${shortDate.format(parseDate(date)).toUpperCase()}</strong>${weekday.format(parseDate(date))}</div>
       <div class="film-title">
         <h3>${film.title}</h3>
-        <p>${film.director} · ${film.year} · ${film.runtime} 分钟</p>
+        <p>${film.director} · ${film.year} · ${film.runtime} min</p>
         ${ratingMarkup(film)}
       </div>
       <div class="film-meta">
         <span class="venue-label ${film.venue}">${venues[film.venue].short}</span>
-        <p>${film.format}</p>
-        <div class="times">${times.map(t => `<span class="time-pill">${t}</span>`).join("")}</div>
+        <p>${displayText(film.format)}</p>
+        <div class="times">${times.map(t => `<span class="time-pill">${displayText(t)}</span>`).join("")}</div>
       </div>
       <div class="film-actions">
-        <a class="film-link ticket" href="${ticketUrl(film)}" target="_blank" rel="noreferrer"><span>官网购票</span><span>↗</span></a>
-        <a class="film-link" href="${doubanUrl(film)}" target="_blank" rel="noreferrer"><span>${ratings[film.title]?.doubanId ? "豆瓣详情" : "豆瓣搜索"}</span><span>↗</span></a>
-        <a class="film-link" href="${imdbUrl(film)}" target="_blank" rel="noreferrer"><span>IMDb 详情</span><span>↗</span></a>
+        <a class="film-link ticket" href="${ticketUrl(film)}" target="_blank" rel="noreferrer"><span>Official tickets</span><span>↗</span></a>
+        <a class="film-link" href="${doubanUrl(film)}" target="_blank" rel="noreferrer"><span>${ratings[film.title]?.doubanId ? "Douban details" : "Search Douban"}</span><span>↗</span></a>
+        <a class="film-link" href="${imdbUrl(film)}" target="_blank" rel="noreferrer"><span>IMDb details</span><span>↗</span></a>
       </div>
     </article>`).join("");
 }
@@ -239,12 +266,12 @@ function updateClock() {
 
 function validateRatingCoverage() {
   const missing = [...new Set(films.map(f => f.title))].filter(title => !ratings[title]);
-  if (missing.length) throw new Error(`缺少评分资料：${missing.join("、")}`);
+  if (missing.length) throw new Error(`Missing rating data: ${missing.join(", ")}`);
 }
 
 async function start() {
   const response = await fetch("./ratings.json", { cache: "no-store" });
-  if (!response.ok) throw new Error(`评分资料加载失败（${response.status}）`);
+  if (!response.ok) throw new Error(`Rating data failed to load (${response.status})`);
   const payload = await response.json();
   ratings = payload.films;
   validateRatingCoverage();
@@ -255,5 +282,5 @@ async function start() {
 
 start().catch(error => {
   console.error(error);
-  document.querySelector("#filmList").innerHTML = `<p class="empty-state">评分资料加载失败，已停止显示过期排期。请先完成评分同步。</p>`;
+  document.querySelector("#filmList").innerHTML = `<p class="empty-state">Rating data failed to load. The schedule is hidden to prevent stale information from being shown.</p>`;
 });
