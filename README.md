@@ -22,17 +22,6 @@ NYC Film Slate brings independent cinema schedules, official ticket links, and f
 
 NYC Film Slate displays Douban and IMDb side by side because the two communities may evaluate the same film differently. Their ratings are useful points of reference, not interchangeable measurements.
 
-## Logo concept
-
-The selected identity combines two instantly recognizable ideas:
-
-- The **Statue of Liberty** represents New York City.
-- The **clapperboard** represents cinema, screenings, and the act of making a film.
-
-The crown grows into the clapper hinge, while the torch completes the top of the slate. Liberty copper green references the statue's patina; charcoal and warm cream evoke theater signage and printed film-program ephemera. The result is designed to feel local, cinematic, and readable at both website-header and favicon sizes.
-
-The green festival-badge direction was selected for the final website. All three original concepts remain in [`brand/concepts`](brand/concepts/) as part of the project's visual-design process, without being displayed in this README.
-
 ## Data validation
 
 ```bash
